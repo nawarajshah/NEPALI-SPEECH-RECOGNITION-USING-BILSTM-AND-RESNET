@@ -14,7 +14,7 @@ from model.utils import CER_from_mfccs, batchify, clean_single_wav, gen_mfcc, in
 from model.model import get_model
 
 # TPU code start here
-resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='')
+resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
 tf.config.experimental_connect_to_cluster(resolver)
 # This is the TPU initialization code that has to be at the beginning.
 tf.tpu.experimental.initialize_tpu_system(resolver)
