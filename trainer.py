@@ -1,7 +1,3 @@
-# Install the necessary system library and librosa dependencies
-!apt-get -y install libsndfile1
-!pip install librosa soundfile
-
 import tensorflow as tf
 import tensorflow.keras.backend as K
 import numpy as np
