@@ -9,7 +9,6 @@ from tqdm import tqdm
 import edit_distance as ed
 
 #Traing with TPU
-import tensorflow as tf
 print("Tensorflow version " + tf.__version__)
 
 try:
